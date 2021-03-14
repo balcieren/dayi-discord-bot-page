@@ -5,16 +5,19 @@ interface Props {
   startDelay?: number;
 }
 
-const BackgroundVideo: FC<Props> = ({ startDelay = 1000, url }) => {
+const BackgroundVideo: FC<Props> = ({ startDelay = 0, url }) => {
   const videoRef = useRef<HTMLVideoElement>();
 
   useEffect(() => {
-    videoRef.current.play();
+    setTimeout(() => {
+      videoRef.current.play();
+    }, startDelay);
   }, []);
   return (
     <video
       ref={videoRef}
       loop
+      muted
       playsInline
       style={{
         position: "absolute",
