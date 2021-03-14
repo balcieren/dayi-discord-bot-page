@@ -6,6 +6,7 @@ import { RiDiscordFill } from "react-icons/ri";
 import MotionBox from "../components/MotionBox";
 import LazyLoad from "react-lazyload";
 import BackgroundVideo from "../components/BackgroundVideo";
+import Head from "next/head";
 
 const Overlay: FC = () => (
   <Box
@@ -21,6 +22,9 @@ const Overlay: FC = () => (
 const Home: NextPage = () => {
   return (
     <Box overflow="hidden">
+      <Head>
+        <title>Dayı Discord Bot</title>
+      </Head>
       <Overlay />
       <LazyLoad>
         <BackgroundVideo url="./background.mp4" />

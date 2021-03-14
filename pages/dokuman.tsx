@@ -9,6 +9,7 @@ import { Button } from "@chakra-ui/button";
 import { Box, Heading, Text, Flex, Spacer, Link } from "@chakra-ui/layout";
 import { NextPage } from "next";
 import { RiDiscordFill } from "react-icons/ri";
+import Head from "next/head";
 
 interface ICommands {
   command: string;
@@ -38,6 +39,9 @@ const Document: NextPage = () => {
       justifyContent="center"
       alignItems="center"
     >
+      <Head>
+        <title>Döküman</title>
+      </Head>
       <Box display="flex" alignItems="center" p="4" w="full" height="10vh">
         <Spacer />
         <Link
