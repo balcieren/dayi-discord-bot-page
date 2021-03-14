@@ -2,21 +2,13 @@ import { FC, useEffect, useRef } from "react";
 
 interface Props {
   url: string;
-  startDelay?: number;
 }
 
-const BackgroundVideo: FC<Props> = ({ startDelay = 0, url }) => {
-  const videoRef = useRef<HTMLVideoElement>();
-
-  useEffect(() => {
-    setTimeout(() => {
-      videoRef.current.play();
-    }, startDelay);
-  }, []);
+const BackgroundVideo: FC<Props> = ({ url }) => {
   return (
     <video
-      ref={videoRef}
       loop
+      autoPlay
       muted
       playsInline
       style={{
