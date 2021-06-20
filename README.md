@@ -2,8 +2,6 @@
 
 # Dayı Discord Bot Page
 
-Offical web page.
-
 ## [Official Web Page](https://dayi.vercel.app/)
 
 ## About
