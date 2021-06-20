@@ -18,7 +18,7 @@ Install node_modules
 ```bash
 npm install
 # or
-yarn install
+yarn
 ```
 
 Run the development server
